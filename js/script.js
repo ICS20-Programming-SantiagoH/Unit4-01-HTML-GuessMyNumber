@@ -16,11 +16,11 @@ function enterClicked() {
   const MIN = 1;
   
   // Number user guessed 
-  let userGuess = parseFloat(document.getElementById('userGuess').value);
+  let userGuess = parseFloat(document.getElementById('user-guess').value);
 
   //Random number generator
-  let generator = Math.floor((Math.random() * MAX) = MIN);
-
+let generator = Math.floor((Math.random() * MAX) + MIN);
+  
   //Display correct or incorrect
   if (userGuess == generator) {
     result = "Congratulations you have correctly gussed the number!"
