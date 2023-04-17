@@ -6,26 +6,30 @@
 
 "use strict";
 /**
- * This function calculates the volume of the sphere.
+ * This function creates a random number.
  */
-function displayStatment() {  
+function enterClicked() {  
 
   // initialize variables
-  let statment = ""
+  let result = "";
+  const MAX = 6;
+  const MIN = 1;
   
-  // Data being collected 
+  // Number user guessed 
   let userGuess = parseFloat(document.getElementById('userGuess').value);
 
-  //Data being processed
-  if (userGuess == number) {
-    statment = "You are correct, GREAT JOB!"
+  //Random number generator
+  let generator = Math.floor((Math.random() * MAX) = MIN);
+
+  //Display correct or incorrect
+  if (userGuess == generator) {
+    result = "Congratulations you have correctly gussed the number!"
   }
 
-  //Data being processed
-  if (userGuess != number) {
-    statment = "You are incorect, try again."
+  if ( userGuess != generator){ 
+    result = "Sorry that is incorrect try again." 
   }
   
-  // Data being shown
-  document.getElementById('statment').innerHTML = statment
+  // Display results back to user
+  document.getElementById('result').innerHTML = result
 }

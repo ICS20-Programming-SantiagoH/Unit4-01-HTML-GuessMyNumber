@@ -3,7 +3,7 @@
   <head>
     <!-- metadata -->
     <meta charset="utf-8" />
-    <meta name="description" content="Fahrenheit to Celsius" />
+    <meta name="description" content="Random number guessing game" />
     <meta name="keywords" content="immaculata, ics2o" />
     <meta name="author" content="Santiago Hewett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
     <!-- CSS connector -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Title -->
-    <title>Fahrenheit to Celsius</title>
+    <title>Random number guessing game</title>
   </head>
   <body>
     <!-- JS connector -->
@@ -28,43 +28,27 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Calculating Fahrenheit to Celsius</span>
+          <span class="mdl-layout-title">Random Number Guessing Game</span>
         </div>
       </header>
-        <!-- Fahrenheit to Celsius image -->
+        <!-- Random number image -->
       <main class="mdl-layout__content">
         <table>
           <tr>
             <th>
-              <img src="./images/convert-fahrenheit-to-celsius-formula-.webp" alt="Fahrenheit to Celsius" width="75%" height="auto"/>
+              <img src="./images/random_number" alt="Random number" width="75%" height="auto"/>
               <!-- Request -->
-              <h5>Enter the Fahrenheit:</h5>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          Entre the fahrenheit:
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="fahrenheit"
-            />
-            <label class="mdl-textfield__label" for="fahrenheit">Fahrenheit...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+              <h5>Enter the your guess for the random number:</h5>
+        
+              <!-- Numeric Textfield -->
+        <form action=" javascript: enterClicked()">
+          <label for="userGuess">Entre Number you Guess</label>
+          <input type="number" id="userGuess" placeholder="ex.4" step="1" min="1" max="6"><br><br>
+          <input type="submit" value="Submit Guess">
               
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="Submit" onclick="calculate()"
-        >
-          Calculate
-        </button>
-        <br />
               <!-- Answer display -->
               <h4>
-                <div id="degreesInCelsius"></div>
+                <div id="result"></div>
               </h4>
       </main>
     </div>
